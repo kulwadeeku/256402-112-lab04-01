@@ -5,22 +5,33 @@
 
 ## Homework 4-1
 1. Write a Java class named `Grader` for calculating students' scores of a course.
-The `Grader` class must consist of the following methods.
-   * `Grader(String name)` is a constructor that receives a course name as its argument.
-   * `void addScore(double score)` records a student's score.
-   * `int countStudents()` returns the number of students (or scores) recorded by this `Grader` object.
-   * `double mean()` calculates an average of the scores.
-   * `int belowMean()` returns the number of students having scores less than the average.
-   * `int aboveMean()` returns the number of students having scores greater than or equal to the average.
-   * `void showGrade()` displays a grade distribution.
-     * Grading Criteria: 
-       0-49 => F, 50-54 => D, 55-59 => D+, 60-64 => C, 65-69 => C+, 70-74 => B, 75-79 => B+, 80-100 => A  
-     
-   * `String getCourseName()` returns the course name of this `Grader` object.
-The `Grader` class must consist of at least two attributes as follows.
-   * `String coureName` 
-   * `ArrayList<String> scores`
-   
+
+   1. The `Grader` class must consist of the following methods.
+      * `Grader(String name)` is a constructor that receives a course name as its argument.
+      * `void addScore(double score)` records a student's score.
+      * `int countStudents()` returns the number of students (or scores) recorded by this `Grader` object.
+      * `double mean()` returns an average of the scores.
+      * `double standardDeviation()` returns a standard deviation of the scores. 
+      * `int belowMean()` returns the number of students having scores less than the average.
+      * `int aboveMean()` returns the number of students having scores greater than or equal to the average.
+      * `void showGrade()` displays a grade distribution.
+      * `String getCourseName()` returns the course name of this `Grader` object.
+      
+   2. The `Grader` class must consist of at least two attributes as follows.
+      * `String coureName` 
+      * `ArrayList<String> scores`
+
+   3. Grading Criteria:
+      * 0-49 => F
+      * 50-54 => D
+      * 55-59 => D+ 
+      * 60-64 => C
+      * 65-69 => C+
+      * 70-74 => B
+      * 75-79 => B+
+      * 80-100 => A  
+
+
 2. Write a Java class named `GraderTest` to test the class `Grader`.
    * Receive the name of an input file from a command-line argument.
    * Use a `java.util.Scanner` class to read from the input file.
@@ -39,7 +50,7 @@ The `Grader` class must consist of at least two attributes as follows.
      and a grade distribution in the following format.
      ```
         <No>. <COURSE_NAME> 
-        mean = <mean>, below mean = <below_mean>, above mean = <above mean>
+        mean = <mean>, below mean = <below_mean>, above mean = <above_mean>, standard deviation = <standard_deviation>
         Grades: A <gradeA>, B+ <gradeBPlus>, B <gradeB>, C+ <gradeCPlus>, C <gradeC>, D+ <gradeDPlus>, D <gradeD>, F <gradeF>           
      ```  
 
@@ -52,9 +63,9 @@ Java,2,80,75
 ```
 $ java GraderTest scores.txt   
 1. Python
-mean = 52.20, below mean = 3, above mean = 2
-Grades: A 1, B+ 0, C+ 0, C 1, D+ 0, D 1, F 2
+mean = 52.20, below mean = 3, above mean = 2, standard deviation = 31.57
+Grades: A 1, B+ 0, B 0, C+ 0, C 1, D+ 0, D 1, F 2
 2. Java
-mean = 77.50, below mean = 1, above mean = 1
-Grades: A 1, B+ 1, C+ 0, C 0, D+ 0, D 0, F 2
+mean = 77.50, below mean = 1, above mean = 1, standard deviation = 3.54
+Grades: A 1, B+ 1, B 0, C+ 0, C 0, D+ 0, D 0, F 0
 ```

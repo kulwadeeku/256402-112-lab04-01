@@ -3,49 +3,9 @@
     {
       "name": "1",
       "setup": "javac -version && javac -d out src/*.java",
-      "run": "java -cp out RightTriangleClient",
-      "input": "3 4",
-      "output": "3.00,4.00,5.00,6.00",
-      "comparison": "exact",
-      "timeout": 1,
-      "points": 1
-    },
-    {
-      "name": "2",
-      "setup": "javac -version && javac -d out src/*.java",
-      "run": "java -cp out RightTriangleClient",
-      "input": "5 12",
-      "output": "5.00,12.00,13.00,30.00",
-      "comparison": "exact",
-      "timeout": 1,
-      "points": 1
-    },
-    {
-      "name": "3",
-      "setup": "javac -version && javac -d out src/*.java",
-      "run": "java -cp out RightTriangleClient",
-      "input": "6 7",
-      "output": "6.00,7.00,9.22,21.00",
-      "comparison": "exact",
-      "timeout": 1,
-      "points": 1
-    },
-    {
-      "name": "4",
-      "setup": "javac -version && javac -d out src/*.java",
-      "run": "java -cp out RightTriangleClient",
-      "input": "1 1",
-      "output": "1.00,1.00,1.41,0.50",
-      "comparison": "exact",
-      "timeout": 1,
-      "points": 1
-    },
-    {
-      "name": "5",
-      "setup": "javac -version && javac -d out src/*.java",
-      "run": "java -cp out RightTriangleClient",
-      "input": "10 24",
-      "output": "10.00,24.00,26.00,120.00",
+      "run": "java -cp out GraderTest scores.txt",
+      "input": "",
+      "output": "1. Python\nmean = 52.20, below mean = 3, above mean = 2\nGrades: A 1, B+ 0, C+ 0, C 1, D+ 0, D 1, F 2\n2. Java\nmean = 77.50, below mean = 1, above mean = 1\nGrades: A 1, B+ 1, C+ 0, C 0, D+ 0, D 0, F 2",
       "comparison": "exact",
       "timeout": 1,
       "points": 1

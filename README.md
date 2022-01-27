@@ -1,36 +1,60 @@
 #### 03603112 Programming Fundamentals II (256402) 
-#### Lab03: Class Creation 
+#### Lab04: Class Creation 
 #### Student ID: <YOUR-STUDENT-ID>
 #### Student Name: <YOUR-NAME>
 
-## Homework 3-3
-Given a client program `RightTriangleClient.java` under the directory `src`.
-
- Implement a `RightTriangle` class that is used by the `RightTriangleClient` program. 
- Your `RightTriangle` class should consists of the following attributes and methods.
- 
- * a `private` `double` attribute, named `base` for storing the value of the triangle's base.
- * a `private` `double` attribute, named `height` for storing the value of the triangle's height. 
- * an `accessor` method, named `getBase()` that returns the size of the triangle's base.
- * an `accessor` method, named `getHeight()` that returns the size of the triangle's height.
- * a `public` method, named `calcHypotenuse()` that returns the size of the hypotenuse of the right triangle.
- * a `public` method, named `calcArea()` that returns the area of the right triangle.
- 
-**Note** DO NOT CHANGE the content of the client program `RightTriangleClient.java`.!!!
- 
-* If your implementation of the class `RightTriangle` is correct. Then, the program `RightTriangleClient.java` will 
- produce output as in the following examples.
+## Homework 4-1
+1. Write a Java class named `Grader` for calculating students' scores of a course.
+The `Grader` class must consist of the following methods.
+   * `Grader(String name)` is a constructor that receives a course name as its argument.
+   * `void addScore(double score)` records a student's score.
+   * `int countStudents()` returns the number of students (or scores) recorded by this `Grader` object.
+   * `double mean()` calculates an average of the scores.
+   * `int belowMean()` returns the number of students having scores less than the average.
+   * `int aboveMean()` returns the number of students having scores greater than or equal to the average.
+   * `void showGrade()` displays a grade distribution.
+     * Grading Criteria: 
+       0-49 => F, 50-54 => D, 55-59 => D+, 60-64 => C, 65-69 => C+, 70-74 => B, 75-79 => B+, 80-100 => A  
+     
+   * `String getCourseName()` returns the course name of this `Grader` object.
+The `Grader` class must consist of at least two attributes as follows.
+   * `String coureName` 
+   * `ArrayList<String> scores`
+   
+2. Write a Java class named `GraderTest` to test the class `Grader`.
+   * Receive the name of an input file from a command-line argument.
+   * Use a `java.util.Scanner` class to read from the input file.
+     * Each line in the input file contains scores for a course.
+       The line format is 
+     ```
+       <COURSE_NAME>,<NUMBER_OF_STUDENT>,score1,score2,score3,...
+     ```
+       For example, the following line represents a course named `Python` for `5` students. 
+       And the scores of the students are: 12, 45, 88.5, 64, 51.5
+     ```
+       Python,5,12,45,88.5,64,51.5
+     ```
+   * Create a `Grader` object for each course read from the input file.
+   * Display the mean score, the number of scores below mean, the number of scores above mean, 
+     and a grade distribution in the following format.
+     ```
+        <No>. <COURSE_NAME> 
+        mean = <mean>, below mean = <below_mean>, above mean = <above mean>
+        Grades: A <gradeA>, B+ <gradeBPlus>, B <gradeB>, C+ <gradeCPlus>, C <gradeC>, D+ <gradeDPlus>, D <gradeD>, F <gradeF>           
+     ```  
 
 #### Example Run 1
 ```
-$ java RightTriangleClient   
-3 4
-3.00,4.00,5.00,6.00
-``` 
- 
-#### Example Run 2
+# file: scores.txt
+Python,5,12,45,88.5,64,51.5
+Java,2,80,75
 ```
-$ java RightTriangleClient   
-5 12
-5.00,12.00,30.00,13.00 
-``` 
+```
+$ java GraderTest scores.txt   
+1. Python
+mean = 52.20, below mean = 3, above mean = 2
+Grades: A 1, B+ 0, C+ 0, C 1, D+ 0, D 1, F 2
+2. Java
+mean = 77.50, below mean = 1, above mean = 1
+Grades: A 1, B+ 1, C+ 0, C 0, D+ 0, D 0, F 2
+```

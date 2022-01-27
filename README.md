@@ -1,5 +1,5 @@
 #### 03603112 Programming Fundamentals II (256402) 
-#### Lab04: Class Creation 
+#### Lab04: Classes and Objects
 #### Student ID: <YOUR-STUDENT-ID>
 #### Student Name: <YOUR-NAME>
 
@@ -12,6 +12,7 @@
       * `int countStudents()` returns the number of students (or scores) recorded by this `Grader` object.
       * `double mean()` returns an average of the scores.
       * `double standardDeviation()` returns a standard deviation of the scores. 
+         Please refer to <a>shorturl.at/gsuNU</a> on how to calculate the standard deviation.   
       * `int belowMean()` returns the number of students having scores less than the average.
       * `int aboveMean()` returns the number of students having scores greater than or equal to the average.
       * `void showGrade()` displays a grade distribution.
@@ -19,7 +20,7 @@
       
    2. The `Grader` class must consist of at least two attributes as follows.
       * `String coureName` 
-      * `ArrayList<String> scores`
+      * `ArrayList<Double> scores`
 
    3. Grading Criteria:
       * 0-49 => F
@@ -63,9 +64,9 @@ Java,2,80,75
 ```
 $ java GraderTest scores.txt   
 1. Python
-mean = 52.20, below mean = 3, above mean = 2, standard deviation = 31.57
+mean = 52.20, below mean = 3, above mean = 2, standard deviation = 25.00, 
 Grades: A 1, B+ 0, B 0, C+ 0, C 1, D+ 0, D 1, F 2
 2. Java
-mean = 77.50, below mean = 1, above mean = 1, standard deviation = 3.54
+mean = 77.50, below mean = 1, above mean = 1, standard deviation = 2.50, 
 Grades: A 1, B+ 1, B 0, C+ 0, C 0, D+ 0, D 0, F 0
 ```

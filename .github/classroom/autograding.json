@@ -5,7 +5,7 @@
       "setup": "javac -version && javac -d out src/*.java",
       "run": "java -cp out GraderTest scores.txt",
       "input": "",
-      "output": "1. Python\nmean = 52.20, below mean = 3, above mean = 2\nGrades: A 1, B+ 0, C+ 0, C 1, D+ 0, D 1, F 2\n2. Java\nmean = 77.50, below mean = 1, above mean = 1\nGrades: A 1, B+ 1, C+ 0, C 0, D+ 0, D 0, F 2",
+      "output": "1. Python\nmean = 52.20, below mean = 3, above mean = 2, standard deviation = 25.00, \nGrades: A 1, B+ 0, B 0, C+ 0, C 1, D+ 0, D 1, F 2\n2. Java\nmean = 77.50, below mean = 1, above mean = 1, standard deviation = 2.50, \nGrades: A 1, B+ 1, B 0, C+ 0, C 0, D+ 0, D 0, F 0",
       "comparison": "exact",
       "timeout": 1,
       "points": 1
